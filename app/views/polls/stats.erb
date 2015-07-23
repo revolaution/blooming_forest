@@ -1,0 +1,8 @@
+<h1 class="page-header">Current Results</h1>
+
+<h2><%= @poll.question %></h2>
+<% @choices.each do |choice| %>
+  <h3><%= choice.answer %>. Votes: <%= choice.votes.length %></h3>
+<% end %>
+
+<a href="/categories/<%= @poll.category.id %>/polls">Find more trees</a>

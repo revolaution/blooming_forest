@@ -1,0 +1,7 @@
+<h1 class="page-header">Pick your most desired tree</h1>
+
+<% @category.polls.each do |poll| %>
+<div class="col-sm-6">
+  <h3><a href="/categories/<%= poll.category.id %>/polls/<%= poll.id %>"><%= poll.question %></a></h3>
+</div>
+<% end %>
