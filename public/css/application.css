@@ -28,7 +28,7 @@
 
 /*HOMEPAGE*/
 body {
-  background: url('background.jpg');
+  background-image: url('background.jpg');
 }
 .jumbotron {
   margin-top: 100px;
