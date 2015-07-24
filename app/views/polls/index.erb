@@ -1,10 +1,14 @@
-<h1 class="page-header">Pick your most desired tree</h1>
+<div class="container">
+  <h1 class="page-header">Pick your most desired tree</h1>
 
-<% @category.polls.each do |poll| %>
-<div class="col-sm-6">
-  <h3><a href="/categories/<%= poll.category.id %>/polls/<%= poll.id %>"><%= poll.question %></a></h3>
+  <% @category.polls.each do |poll| %>
+  <div class="col-sm-6">
+    <h3><a class="links" href="/categories/<%= poll.category.id %>/polls/<%= poll.id %>"><%= poll.question %></a></h3>
+  </div>
+  <% end %>
+  <div class="new-submission">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 new-submission"><h3><a class="btn btn-primary plant" role="button" href="/categories/<%= @category.id %>/polls/new">Plant a new tree</a></h3></div>
+    <div class="col-md-3"></div>
+  </div>
 </div>
-<% end %>
-<div class="col-sm-3"></div>
-<div class="col-sm-6"><h3><a href="/categories/<%= @category.id %>/polls/new">Plant a new tree</a></h3></div>
-<div class="col-sm-3"></div>
