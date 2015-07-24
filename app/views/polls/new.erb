@@ -1,29 +1,37 @@
 <h1 class="page-header">Plant a new tree in <%= @category.name %></h1>
 
 <div class="poll-page">
-  <!-- <div class="col-sm-3"></div> -->
   <form class="new-tree" action="/categories/<%= @category.id %>/polls" method="post">
     <div class="col-sm-12">
-    <input type="text" name="question" placeholder="Put your question here">
+      <div class="col-sm-3"></div>
+        <input class="col-sm-6" type="text" name="question" placeholder="Put your question here">
+      <div class="col-sm-3"></div>
     </div>
 
     <div class="col-sm-12">
-    <input type="text" name="answer_one" placeholder="First Response">
+      <div class="col-sm-3"></div>
+        <input class="col-sm-6" type="text" name="answer_one" placeholder="First Response">
+      <div class="col-sm-3"></div>
     </div>
 
     <div class="col-sm-12">
-    <input type="text" name="answer_two" placeholder="Second Response">
+      <div class="col-sm-3"></div>
+        <input class="col-sm-6" type="text" name="answer_two" placeholder="Second Response">
+      <div class="col-sm-3"></div>
     </div>
 
     <div class="col-sm-12">
-    <input type="text" name="answer_three" placeholder="Third Response (Optional)">
+      <div class="col-sm-3"></div>
+        <input class="col-sm-6" type="text" name="answer_three" placeholder="Third Response (Optional)">
+      <div class="col-sm-3"></div>
     </div>
 
     <div class="col-sm-12">
-    <input type="text" name="answer_four" placeholder="Fourth Response (Optional)">
+      <div class="col-sm-3"></div>
+        <input class="col-sm-6" type="text" name="answer_four" placeholder="Fourth Response (Optional)">
+      <div class="col-sm-3"></div>
     </div>
 
-    <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Make new tree</button>
+    <button type="submit" class="btn btn-primary new" data-toggle="button" aria-pressed="false" autocomplete="off">Make new tree</button>
   </form>
-  <!-- <div class="col-sm-3"></div> -->
 </div>

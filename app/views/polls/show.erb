@@ -1,24 +1,30 @@
-<h1 class="page-header">Pick your most desired bloom</h1>
+<div class="container">
+  <h1 class="page-header">Pick your most desired bloom</h1>
 
-<div class="poll-page">
-  <h2><%= @poll.question %><h2>
-  <div class="col-sm-3"></div>
-  <form class="col-sm-6 answer-form" action="/categories/<%= @poll.category.id %>/polls/votes" method="post">
-    <% @poll.choices.each do |choice| %>
-      <div class="input-group">
-        <input type="hidden" name="poll_id" value="<%= @poll.id %>">
-        <span class="input-group-addon">
-          <input type="radio" name="choice_id" value="<%= choice.id %>">
-        </span>
-        <div class="form-control">
-          <%= choice.answer %>
+  <div class="poll-page">
+    <h2><%= @poll.question %><h2>
+    <div class="col-sm-3"></div>
+    <form class="col-sm-6 answer-form" action="/categories/<%= @poll.category.id %>/polls/votes" method="post">
+      <% @poll.choices.each do |choice| %>
+        <div class="input-group">
+          <input type="hidden" name="poll_id" value="<%= @poll.id %>">
+          <span class="input-group-addon">
+            <input type="radio" name="choice_id" value="<%= choice.id %>">
+          </span>
+          <div class="form-control">
+            <%= choice.answer %>
+          </div>
         </div>
-      </div>
-    <% end %>
-    <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Vote</button>
-  </form>
-  <div class="col-sm-3"></div>
-</div>
+      <% end %>
+      <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Vote</button>
+    </form>
+    <div class="col-sm-3"></div>
+  </div>
 
-<div id="container" style="width:100%; height:400px;"></div>
-<a id="find_trees" href="/categories/<%= @poll.category.id %>/polls">Find more trees</a>
+  <div class="row">
+    <div id="graph"></div>
+    <div class="col-lg-4"></div>
+    <a id="find_trees" class="col-lg-4 btn btn-primary" href="/categories/<%= @poll.category.id %>/polls">Find more trees</a>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
